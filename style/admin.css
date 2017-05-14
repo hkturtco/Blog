@@ -1,0 +1,72 @@
+
+
+/*--------------------------- Admin page ------------------------------*/
+.manage {
+	width:90%;
+	padding:20px;
+	margin:auto;
+	background-color: #222222;
+	height: 100%
+}
+
+
+#adminmenu {
+	padding-left: 0;
+	margin:0 auto;
+	width:100%;
+}
+
+#adminmenu li {
+	float: left;
+	list-style: none;
+	margin-right:10px;
+	display: block;
+	padding: 10px 12px;
+	border: 1px dotted #ffffff;
+	background-color: #444444;
+}
+
+table.admin {
+	width:90%;
+	text-align: left;
+	padding:10px;
+	border:0px dotted #DDDDDD;
+	font-size: 12px;
+	margin: 30px auto;
+	color:#ffffff;
+	background-color:rgba(100,150,0,0.4);
+	border-radius: 8px 8px;
+}
+
+table.admin th{
+	background-color: #0000000;
+	border:0px dotted #BBBBBB;
+	padding: 3px 6px; 
+	font-weight: normal;
+	border-radius: 8px 8px;
+	font-weight: bold;
+}
+
+ table.admin tr td{
+	border:1px dotted #dddddd;
+	padding: 5px 6px; 
+	border-radius: 8px 8px;
+}
+
+ table.admin tr:nth-child(odd) td{
+	background-color:rgba(100,102,200,0.4);
+}
+
+ table.admin tr:hover td{
+	background-color:rgba(0,102,0,0.4);
+}
+
+.managebutton{
+	border:2px solid #cccccc;
+	background-color: #222222;
+	width:30%;
+	padding:20px;
+	text-align: center;
+	margin: auto;
+	font-size:15px;
+}

@@ -1,0 +1,561 @@
+*{
+	box-sizing: border-box;
+}
+
+html,body {
+	height:100%;
+	margin:0;
+	font-family: Tahoma;
+	background-color: #000000;
+}
+
+/*================ Other ====================*/
+#searchprompt{
+	position:fixed;
+	top:25%;
+	z-index: 5;	
+	font-size:50px;
+	color: #ffffff;
+	padding: 50px;
+}
+
+#searchprompt2{
+	position:fixed;
+	top:50%;
+	z-index: 5;	
+	font-size:25px;
+	color: #ffffff;
+	padding: 50px;
+}
+
+.dimming{
+    transition: all 0.5s ease;
+}
+
+.curlocation {
+	padding:0 0 0 20px;
+}
+
+.clear{
+	clear: both;
+}
+
+p.error {
+	color: red;
+}
+
+p,li {
+	color:#ffffff;
+	font-size:12px;
+	line-height: 18px;
+	list-style-type: disc;
+	vertical-align: middle;
+}
+
+
+h1,h2,h3 {
+	color: #ffffff;
+	font-size:24px;
+}
+
+h1.subdes {
+	color: #ffffff;
+	font-size:12px;
+}
+
+h5 {
+	color: #ffffff;
+	font-size:18px;
+	margin:15px;
+	text-shadow: 2px 10px 20px #000000;
+}
+
+a{
+	color: rgba(255, 127,80,0.8);
+	font-size:12px;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: rgba(255, 255,255,1);
+	font-size:12px;
+	text-decoration: none;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0.5; }
+    to   { opacity: 1; }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*--------------------------- header ------------------------------*/
+#headerbg{
+	width: 100%;
+	background-image: url("../images/header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0% 20%;
+	font-size: 50px;
+	color: #dddddd;
+	font-weight: bold;
+	text-align: center;
+	padding: 120px 0;
+	margin:0;
+	text-shadow: -7px 5px 20px #000000, 7px 5px 20px #000000;
+	box-shadow: 0px 5px 50px #000000;
+	position:relative;
+	z-index:2;
+}
+/*--------------------------- homepage ------------------------------*/
+#wrapper {
+	position:relative;
+	z-index:1;
+	margin:auto;
+	background-image: url("../images/wallpaper.jpg");
+	background-size: 50%;
+	padding: 10px;
+	-webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -ms-animation: fadein 0.5s; /* Internet Explorer */
+    -o-animation: fadein 0.5s; /* Opera < 12.1 */
+    animation: fadein 0.5s;
+}
+
+#wrapper #main{
+	margin-top:20px;
+	float:left;
+	width: 72%;
+	padding-left: 0.5%;
+}
+
+#wrapper #main #blogbox {
+	width:100%;
+	border: 1px solid #888888;
+	padding: 15px;
+	background-color: rgba(205, 253, 255,0.2);
+	box-shadow: 0px 5px 50px #000000, inset 0px 0px 100px #222222;
+	display: inline-block;
+	margin-bottom: 20px;
+	opacity: 0.6;
+	transition: all 0.5s ease;
+}
+
+#wrapper #main #blogbox:hover {
+	background-color: rgba(205, 253, 181,0.2);
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 700px){
+	#wrapper #main{
+		width: 95%;
+		float: none;
+		padding: auto;
+		margin: auto;
+		display: block;
+	}
+	#wrapper #main #blogbox {
+		padding:25px;
+	}
+}
+/*==== Blog in homepage ====*/
+
+#wrapper #main #blogbox .blogcontent{
+	padding-left: 25px;
+}
+
+#wrapper #main #blogbox .blogcontent p{
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	margin-top:0px;
+}
+
+@media screen and (max-width:700px){
+	#main #blogbox .blogcontent{
+	padding-left: 0px;
+	}
+	#main #blogbox .blogcontent p{
+		font-family: 'Raleway', sans-serif;
+		font-size:18px;
+	}
+}
+
+#wrapper #main #blogbox h1.blogtitle a{
+	font-family: 'Patua One', cursive;
+	font-size: 21px;
+	color: #CACACA;
+	text-decoration: underline;
+}
+
+#wrapper #main #blogbox h1.blogtitle a:hover{
+	font-size: 21px;
+	color: #AAAAAA;
+	text-decoration: none;
+}
+
+#wrapper #main #blogbox .blogcontent img, #blog .blogcontent img{
+	vertical-align: middle;
+	padding:5px;
+	box-shadow: 0px 5px 10px #000000;
+	background-color: #ffffff;
+	float:left;
+	width:25%;
+	height:auto;
+}
+
+@media screen and (max-width: 700px){
+	#wrapper #main #blogbox .blogcontent img, #blog .blogcontent img{
+	width: 90%;
+	padding:5px;
+	box-shadow: 0px 5px 10px #000000, inset 0px 0px 30px #222222;
+	background-color: #ffffff;
+	height:auto;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	float:none;
+}
+}
+
+#wrapper #main #blogbox .blogcontent div, #blog .blogcontent div{
+	display: block;
+	float:right;
+	width:70%;
+	padding: auto auto 15px 30px;
+}
+
+@media screen and (max-width: 700px){
+	#wrapper #main #blogbox .blogcontent div, #blog .blogcontent div{
+	width:95%;
+	padding: auto;
+	margin:auto;
+	float:none;
+}
+}
+
+#wrapper #main #blogbox button{
+	width:30%;
+	color:#ffffff;
+	padding:8px;
+	margin-bottom: 20px;
+	border: 2px solid #ffffff;
+	background-color: transparent;
+	border-radius:15px;
+	box-shadow: 5px 5px 10px #333333;
+	transition: all .5s ease-out;
+}
+
+#wrapper #main #blogbox button:hover{
+	background-color: #cc5500;
+	transition: all .5s ease-in;
+	width:35%;
+}
+
+@media screen and (max-width:700px){
+	#wrapper #main #blogbox button{
+	width:75%;
+	height:45px;
+	color:#ffffff;
+	padding:8px;
+	border: 2px solid #ffffff;
+	background-color: transparent;
+	border-radius:15px;
+	transition: all .5s ease-out;
+	}
+	#wrapper #main #blogbox button:hover{
+	background-color: #cc5500;
+	transition: all .5s ease-in;
+	width:85%;
+	}
+}
+
+/*--------------------------- blog post ------------------------------*/
+
+#wrapper #blog {
+	margin:20px auto 20px auto;
+	width:80%;
+	border: 1px solid #AEAEAE;
+	padding: 20px;
+	background-color: rgba(205, 253, 181,0.1);
+	box-shadow: 0px 5px 50px #000000, inset 0px 0px 100px #222222;
+	transition: all 0.5s ease;
+}
+
+#wrapper #blog:hover {
+	background-color: rgba(205, 253, 181,0.2);
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+
+.masonry { /* Masonry container */
+    column-count: 2;
+    column-gap: 1em;
+}
+
+/*--------------------------- Comment Section ------------------------------*/
+#wrapper #commentsec {
+	width:80%;
+	margin:20px auto 20px auto;
+	border: 1px solid #AEAEAE;
+	padding: 20px;
+	border-radius: 0px 20px;
+	box-shadow: 0px 5px 20px #787878;
+	background-color: rgba(255,255,255,0.1);
+}
+/*--------------------------- side bar ------------------------------*/
+#sidebar{
+	position:relative;
+	float:right;
+	z-index: 3;
+	width:25%;
+	margin-right: 1%;
+
+}
+
+#sidebar .subside{
+	border-width: 1px;	
+	border-style: solid;
+	border-color: #888888;
+	border-radius: 5px;
+	box-shadow: 0px 5px 20px #000000, inset 0 0 30px #333333;
+	margin-right:10px;
+	background: 
+    url(../images/nail.png) left 3px top 3px no-repeat, 
+    url(../images/nail.png) right 3px top 3px no-repeat, 
+    url(../images/nail.png) left 3px bottom 3px no-repeat, 
+    url(../images/nail.png) right 3px bottom 3px no-repeat, 
+    rgba(190, 100, 70,0.1);
+    background-size: 7px;
+    padding:10px;
+}
+
+#sidebar #propic{
+	display: block;
+	border-radius: 50%;
+	height: 70%;
+	width:70%;
+	margin: auto;
+	box-shadow: 0 4px 18px 0 rgba(20, 20, 20, 0.7), 0 6px 30px 0 rgba(20, 20, 20, 0.7);
+	transition: all 0.5s ease-in;
+}
+
+#sidebar #propic:hover{
+	opacity: 0.6;
+}
+
+#sidebar .propiccontainer {
+    position: relative;
+    margin-top:-70px;
+}
+
+#sidebar .propiccenter {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 120%;
+    color: #ffffff;
+    font-family: "Brush Script MT", cursive;
+}
+
+@media screen and (max-width: 700px){
+	#sidebar{
+		display: none;
+	}
+}
+
+#sidebar .subside ul {
+	padding-left:10%;
+}
+
+/*--------------------------- Footer ------------------------------*/
+footer{
+	clear:both;
+	bottom:0;
+	padding: 20px 0 20px 0;
+	text-align: right;
+	padding:20px;
+	background-color: rgba(0,0,0, 0.4);
+	box-shadow: 0px -10px 10px #333333;
+}
+
+/*--------------------------- menu bar ------------------------------*/
+.menubar {
+	position:fixed;
+	z-index:4;
+	overflow:hidden;
+	background-color:#333;
+	box-shadow: 0px 5px 30px #222222;
+	width:100%;	
+	top:0;
+	opacity:0.9;
+}
+
+.menubar a{
+	float: left;
+	display: block;
+	color: #f5f5f5;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
+	-webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+
+}
+
+.menubar a.menulogo{
+	background-color:#446699;
+	border-radius: 0 10px 10px 0;
+}
+
+.menubar a.menulogo img{
+	width:15px ;
+}
+
+.menubar a:hover{
+	background-color: rgba(255,102,0,0.2);
+	color: #cccccc;
+	font-size: 15px;
+	-webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.menubar .icon{
+	display: none;
+}
+
+@media screen and (max-width: 700px){
+	.menubar a:not(:first-child){
+		display: none;
+	}
+	.menubar a.icon {
+		float:right;
+		display:block;
+
+	}
+	.menubar #searchbar{
+		display: none;
+}
+
+}
+
+@media screen and (max-width: 700px){
+	.menubar.responsive {
+		position: fixed;
+	}
+	.menubar.responsive .icon{
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+	.menubar.responsive a{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	.menubar.responsive a:not(:first-child):not(:last-child){
+		-webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 0.5s; /* Firefox < 16 */
+        -ms-animation: fadein 0.5s; /* Internet Explorer */
+        -o-animation: fadein 0.5s; /* Opera < 12.1 */
+    	animation: fadein 0.5s;
+	}
+}
+
+/*--------------------------- login ------------------------------*/
+
+#login {
+	border: 1px solid #AEAEAE;
+	margin: 30px auto;
+	padding: 25px;
+	width: 70%;
+}
+
+
+/*------------------------ Search bar ----------------------------*/
+
+.menubar #searchbar{
+	float: right; 
+	display: block; 
+	padding: 8px 5px;
+}
+
+@media screen and (max-width: 700px){
+	.menubar #searchbar{
+		display: none;
+}
+
+}
+
+.menubar #searchbar form input{
+	border:1px solid #555555;
+	padding: 5px;
+	font-size: 1.0em;
+	margin:2px;
+}
+
+.menubar #searchbar form.search input[type=text]{
+	border-radius:5px;
+	background-color: rgba(255, 255,255,0.2);
+	font-size:12px;
+	color:#bbbbbb;
+	background-image: url('../images/search.png');
+	background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding-left:30px;
+    width:150px;
+    transition: all 0.5s ease;
+}
+
+.menubar #searchbar form.search input[type=text]:hover{
+	background-color: rgba(255, 255,255,0.5);
+	font-size:12px;
+    transition: all 0.5s ease;
+}
+
+.menubar #searchbar form.search input[type=text]:focus {
+	background-color: rgba(255, 255,255,0.6);
+	color:#000000;
+    box-shadow: 0 0 10px rgba(255, 100, 0, 0.5);
+    transition: all 0.5s ease;
+    outline: none;
+    width: 200px;
+}
+
+.menubar #searchbar form.search input[type=submit]{
+	border-radius:5px;
+	background-color: rgba(255, 255,255,0.2);
+	font-size:12px;
+	color:#bbbbbb;
+	outline: none;
+}
+
+.menubar #searchbar form.search input[type=submit]:hover{
+	background-color: rgba(255, 255,255,0.4);
+	color:#000000;
+	transition: all 0.5s ease;
+}
+
