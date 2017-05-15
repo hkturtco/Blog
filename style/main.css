@@ -190,10 +190,11 @@ a:hover{
 }
 
 @media screen and (max-width:700px){
-	#main #blogbox .blogcontent{
-	padding-left: 0px;
+	#wrapper #main #blogbox .blogcontent{
+		padding-left:5px;
+		text-align:justify;
 	}
-	#main #blogbox .blogcontent p{
+	#wrapper #main #blogbox .blogcontent p{
 		font-family: 'Raleway', sans-serif;
 		font-size:18px;
 	}
